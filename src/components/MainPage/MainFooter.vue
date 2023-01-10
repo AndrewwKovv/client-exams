@@ -153,8 +153,9 @@ a {
     min-width: 130px;
   }
 }
+
 @media screen and (max-width: 760px) {
-  .footer__wrapper{
+  .footer__wrapper {
     flex-wrap: wrap;
   }
 }

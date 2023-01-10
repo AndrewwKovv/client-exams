@@ -41,19 +41,26 @@ export default {
 .app-header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
   justify-content: space-between;
   background-color: #505050;
   height: 67px;
-  width: calc(1440px - 130px);
   padding: 0 30px;
   &__profile {
     display: flex;
     align-items: center;
     gap: 35px;
+    flex-wrap: wrap;
     cursor: pointer;
     &:hover {
       opacity: 0.75;
     }
+  }
+}
+@media screen and (max-width: 500px) {
+  .app-header {
+    height: 87px;
   }
 }
 </style>

@@ -91,22 +91,23 @@ export default {
   &__head {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__title {
     display: flex;
     margin-top: 75px;
     border: 1px solid #343434;
     border-radius: 5px;
+    justify-content: space-around;
   }
   &__subtitle {
     margin-left: 15px;
-    width: 390px;
   }
   &__search-inp {
     border: 2px solid #343434;
     border-radius: 10px;
     background-color: #505050;
-    width: 250px;
+    max-width: 250px;
     height: 25px;
     padding: 5px;
   }

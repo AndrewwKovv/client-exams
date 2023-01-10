@@ -2,13 +2,13 @@
   <main class="main">
     <section class="intro">
       <main-text class="intro__title" :fontFamily="'montSer'"
-        ><h1>
+        ><h1 class="intro__title">
           Сервис для автоматицизованных <br />
           собеседований
         </h1>
       </main-text>
-      <main-text :fontFamily="'montSer'" :fontSize="18">
-        <p>
+      <main-text class="intro__subtitle" :fontFamily="'montSer'" :fontSize="18">
+        <p class="intro__subtitle">
           Мы предлагаем удобную систему для проведения и<br />
           хранения автоматицизованных собеседований в одном окне<br />
           браузера
@@ -406,6 +406,54 @@ export default {
       margin: 5px 0;
       text-align: center;
     }
+  }
+}
+@media screen and (max-width: 1025px) {
+  .function__desc_img {
+    width: 480px;
+  }
+  .function__desc_about {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 844px) {
+  .feedback__users {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .intro__subtitle {
+    font-size: 16px;
+  }
+  .intro__title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .function__desc_img {
+    width: 358px;
+  }
+  .function-icn {
+    width: 32px;
+  }
+  .items-title {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .items-title {
+    font-size: 12px;
+  }
+  .function__desc_img {
+    width: 288px;
+  }
+  .function__btn-text {
+    margin: 6px 12px;
+  }
+  .function-icn {
+    width: 22px;
   }
 }
 </style>

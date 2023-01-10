@@ -16,7 +16,6 @@ export default {
 
 <style lang="scss" scoped>
 .applications-cont {
-  display: flex;
   background-color: #343434;
   height: 100vh;
   width: 100vw;

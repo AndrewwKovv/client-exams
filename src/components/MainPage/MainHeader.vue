@@ -70,4 +70,18 @@ export default {
     border-radius: 5px;
   }
 }
+@media screen and (max-width: 830px) {
+  .header {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 649px) {
+  .header {
+    height: 170px;
+  }
+  .header__nav {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
 </style>

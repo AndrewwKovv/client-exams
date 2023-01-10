@@ -20,5 +20,11 @@ export default {
 <style lang="scss" scoped>
 .container {
   padding: 36px 130px 0;
+  background-color: #1e1e1e;
+}
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 15px 20px 0;
+  }
 }
 </style>

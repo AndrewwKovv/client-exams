@@ -55,12 +55,12 @@ export default {
 <style lang="scss" scoped>
 .vacancy__link {
   display: flex;
+  justify-content: space-around;
 
   text-decoration: none;
 }
 .vacanci {
   &__item {
-    display: flex;
     margin-top: 35px;
     border: 1px solid #343434;
     border-radius: 5px;
@@ -70,7 +70,6 @@ export default {
   }
   &__title {
     margin: 15px 0 15px 15px;
-    width: 390px;
     word-break: break-word;
   }
 }
