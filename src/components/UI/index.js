@@ -5,6 +5,7 @@ import MainModal from './MainModal.vue';
 import AuthModal from './AuthModal.vue';
 import FeedbackModal from './FeedbackModal';
 import VacancyModal from './VacancyModal';
+import ChangeModal from './ChangeModal';
 
 export default [
   MainText,
@@ -14,4 +15,5 @@ export default [
   AuthModal,
   FeedbackModal,
   VacancyModal,
+  ChangeModal,
 ];

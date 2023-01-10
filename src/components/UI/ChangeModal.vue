@@ -7,7 +7,7 @@
         :fontSize="22"
         :fontWeight="500"
       >
-        Новая вакансия
+        {{ nameVacy }}
       </main-text>
       <form @submit.prevent class="vacancy-modal__form">
         <label class="vacancy__label" for="login"
@@ -17,7 +17,7 @@
             :fontSize="12"
             :fontWeight="400"
           >
-            название вакансии
+            изменить название
           </main-text></label
         >
         <main-form class="vacancy__form_input" v-model="title" type="text" />
@@ -28,7 +28,7 @@
             :fontSize="12"
             :fontWeight="400"
           >
-            ссылка на вакансию (необязательно)
+            изменить ссылку
           </main-text></label
         >
         <main-form class="vacancy__form_input" v-model="link" type="text" />
@@ -41,7 +41,7 @@
             :fontSize="20"
             :fontWeight="500"
           >
-            Сохранить
+            Изменить
           </main-text></my-button
         >
       </div>
@@ -52,12 +52,11 @@
 <script>
 import { mapMutations } from 'vuex';
 export default {
-  name: 'vacancy-modal',
+  name: 'change-modal',
   data() {
     return {
       title: '',
       link: '',
-      falseBody: String,
     };
   },
   props: {
@@ -65,6 +64,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    nameVacy: String,
   },
   methods: {
     hideDialog() {

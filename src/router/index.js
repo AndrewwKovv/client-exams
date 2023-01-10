@@ -9,23 +9,27 @@ const routes = [
   {
     path: '/applications',
     name: 'applications',
+    props: true,
     component: () => import('@/components/AppPage/Applications.vue'),
     children: [
       {
         path: '/candidates',
         name: 'candidates',
+        props: true,
         component: () =>
           import('@/components/AppPage/Application/CandidatesPage.vue'),
       },
       {
         path: '/tasks',
         name: 'tasks',
+        props: true,
         component: () =>
           import('@/components/AppPage/Application/TasksPage.vue'),
       },
       {
         path: '/templates',
         name: 'templates',
+        props: true,
         component: () =>
           import('@/components/AppPage/Application/TemplatesPage.vue'),
       },
@@ -37,7 +41,7 @@ const routes = [
           import('@/components/AppPage/Application/VacanciPage.vue'),
       },
       {
-        path: '/vacanci/:id',
+        path: '/vacanci/:id:vacName',
         name: 'vacancyPage',
         props: true,
         component: () =>
@@ -46,10 +50,20 @@ const routes = [
       {
         path: '/settings',
         name: 'settings',
+        props: true,
         component: () =>
           import('@/components/AppPage/Application/SettingsPage.vue'),
       },
     ],
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('@/views/erroe.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
   },
 ];
 

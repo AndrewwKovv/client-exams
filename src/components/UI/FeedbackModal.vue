@@ -52,7 +52,7 @@
         >
       </div>
       <main-text class="btn__save-text" :fontFamily="'montSer'" :fontSize="14"
-        >Ваш отзыв будет проверен модератором</main-text
+        >Ваш отзыв после отправки будет проверен модератором</main-text
       >
     </div>
   </div>

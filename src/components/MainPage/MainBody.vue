@@ -3,15 +3,15 @@
     <section class="intro">
       <main-text class="intro__title" :fontFamily="'montSer'"
         ><h1 class="intro__title">
-          Сервис для автоматицизованных <br />
-          собеседований
+          {{ myPadeDate.intro.title }} <br />
+          {{ myPadeDate.intro.title1 }}
         </h1>
       </main-text>
       <main-text class="intro__subtitle" :fontFamily="'montSer'" :fontSize="18">
         <p class="intro__subtitle">
-          Мы предлагаем удобную систему для проведения и<br />
-          хранения автоматицизованных собеседований в одном окне<br />
-          браузера
+          {{ myPadeDate.intro.subtitle.start }}<br />
+          {{ myPadeDate.intro.subtitle.center }}<br />
+          {{ myPadeDate.intro.subtitle.end }}
         </p>
       </main-text>
       <my-button class="intro__btn" @click="showDialog">
@@ -112,7 +112,7 @@
 
           <div class="function__desc_about">
             <img
-              src="@/assets/function-task.svg"
+              src="@/assets/func-vacancy-img.png"
               alt="about-task"
               class="function__desc_img"
             />
@@ -140,7 +140,7 @@
               class="function__desc-title"
               :fontFamily="'montSer'"
               :fontSize="28"
-              >Отчёты
+              >Отчёты (в разработке)
               <main-text
                 class="function__desc-subtitle"
                 :fontFamily="'montSer'"
@@ -240,6 +240,9 @@ import FeedbackModal from '../UI/FeedbackModal.vue';
 
 export default {
   name: 'my-body',
+  props: {
+    myPadeDate: Object,
+  },
   data() {
     return {
       currentSlideIndex: 0,
@@ -360,6 +363,9 @@ export default {
 }
 .items-title {
   margin: 20px 0 40px;
+}
+.function__desc_img {
+  width: 600px;
 }
 .feedback {
   margin: 40px 0;

@@ -11,18 +11,21 @@
         alt="Logo"
         class="header__logo__img"
       />
-      ItvHunt
+      {{ myPadeDate.header.logo }}
     </main-text>
     <nav class="header__nav">
-      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18"
-        >Возможности</main-text
-      >
-      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18"
-        >Контакты</main-text
-      >
+      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18">{{
+        myPadeDate.header.abs
+      }}</main-text>
+      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18">{{
+        myPadeDate.header.contact
+      }}</main-text>
       <my-button class="header__btn" @click="showDialog">
-        <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18"
-          >Войти</main-text
+        <main-text
+          class="header__text"
+          :fontFamily="'montSer'"
+          :fontSize="18"
+          >{{ myPadeDate.header.login }}</main-text
         >
       </my-button>
       <auth-modal v-model:show="dialogVisible"></auth-modal>
@@ -42,6 +45,9 @@ export default {
     showDialog() {
       this.dialogVisible = true;
     },
+  },
+  props: {
+    myPadeDate: Object,
   },
 };
 </script>

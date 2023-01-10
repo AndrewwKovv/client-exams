@@ -6,7 +6,10 @@
   >
     <router-link
       class="vacancy__link"
-      :to="{ name: 'vacancyPage', params: { id: vacancies.id } }"
+      :to="{
+        name: 'vacancyPage',
+        params: { id: vacancies.id, vacName: vacancies.title },
+      }"
     >
       <main-text
         class="vacanci__title"
@@ -25,7 +28,7 @@
         {{ vacancies.link }}
       </main-text>
       <main-text
-        class="vacanci__title"
+        class="vacanci__title_time"
         :fontFamily="'montSer'"
         :fontSize="16"
         :fontWeight="500"
@@ -71,6 +74,9 @@ export default {
   &__title {
     margin: 15px 0 15px 15px;
     word-break: break-word;
+    &_time {
+      max-width: 208px;
+    }
   }
 }
 </style>

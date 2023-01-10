@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <my-header></my-header>
-    <my-body></my-body>
-    <MyFooter></MyFooter>
+    <my-header :myPadeDate="myPadeDate"></my-header>
+    <my-body :myPadeDate="myPadeDate"></my-body>
+    <MyFooter :myPadeDate="myPadeDate"></MyFooter>
   </div>
 </template>
 
@@ -14,6 +14,19 @@ import MyFooter from '@/components/MainPage/MainFooter.vue';
 export default {
   components: { MyHeader, MyBody, MyFooter },
   name: 'main-page',
+  data() {
+    return { myPadeDate: [] };
+  },
+  methods: {
+    getDate() {
+      fetch('mainPage.json')
+        .then((response) => response.json())
+        .then((date) => (this.myPadeDate = date));
+    },
+  },
+  beforeMount() {
+    this.getDate();
+  },
 };
 </script>
 
