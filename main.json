@@ -1,0 +1,22 @@
+{
+    "vacancies": [
+        {   
+            "id": "1",
+            "title": "Frontend",
+            "link": "https://linktovacancies.ru",
+            "created_at": "10.01.2022"
+        },
+        {
+            "id": "2",
+            "title": "Backend",
+            "link": "https://linktovacancies.ru",
+            "created_at": "10.01.2022"
+        },
+        {
+            "id": "3",
+            "title": "Fullstack",
+            "link": "https://linktovacancies.ru",
+            "created_at": "10.01.2022"
+        }
+    ]
+}
