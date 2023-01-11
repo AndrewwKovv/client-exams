@@ -72,15 +72,20 @@ export default {
     },
     ...mapMutations(['createVacancies']),
     onClick() {
-      this.createVacancies({
-        title: this.title,
-        link: this.link,
-        id: Date.now,
-        created_at: new Date(),
-      });
-      this.$emit('update:show', false);
-      this.title = '';
-      this.link = '';
+      this.falseBody = '';
+      if (this.title === this.falseBody) {
+        console.log('!');
+      } else {
+        this.createVacancies({
+          title: this.title,
+          link: this.link,
+          id: Date.now,
+          created_at: new Date(),
+        });
+        this.$emit('update:show', false);
+        this.title = '';
+        this.link = '';
+      }
     },
   },
 };
