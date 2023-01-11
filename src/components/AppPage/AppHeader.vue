@@ -10,7 +10,7 @@
 
     <div class="app-header__profile">
       <button type="button" class="btn btn-dark">
-        <a class="app-header__text_link" href="/appPage.json">JSON</a>
+        <a class="app-header__text_link" href="/appPage.json">Json</a>
       </button>
       <button type="button" class="btn btn-dark">
         <main-text
