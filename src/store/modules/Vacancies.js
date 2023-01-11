@@ -5,7 +5,7 @@ export default {
   getters: {
     validVacancies(state) {
       return state.vacancies.filter((v) => {
-        return v.title;
+        return v.title && v.link;
       });
     },
     allVacancies(state) {

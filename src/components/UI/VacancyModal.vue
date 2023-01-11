@@ -28,7 +28,7 @@
             :fontSize="12"
             :fontWeight="400"
           >
-            ссылка на вакансию (необязательно)
+            ссылка на вакансию
           </main-text></label
         >
         <main-form class="vacancy__form_input" v-model="link" type="text" />

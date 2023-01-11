@@ -1,10 +1,8 @@
 <template>
   <aside class="app-sidebar">
-    <router-link to="/" class="button">
-      <div class="logo">
-        <img src="@/assets/header_logo.svg" alt="Logo" />
-      </div>
-    </router-link>
+    <div class="logo">
+      <img src="@/assets/header_logo.svg" alt="Logo" />
+    </div>
 
     <div class="menu">
       <router-link to="/candidates" class="button">
