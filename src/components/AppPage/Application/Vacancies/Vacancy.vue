@@ -112,6 +112,7 @@ export default {
   }
   &__title {
     margin-right: 15px;
+    color: white;
   }
   &__subtitle {
     margin: auto;

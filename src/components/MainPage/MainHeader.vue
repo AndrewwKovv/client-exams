@@ -109,10 +109,20 @@ export default {
     text-decoration: none;
   }
 }
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1030px) {
   .header {
     flex-wrap: wrap;
     height: 110px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .header {
+    height: 170px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .header__nav {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 649px) {
@@ -122,6 +132,7 @@ export default {
   }
   .header__nav {
     gap: 10px;
+    flex-wrap: nowrap;
     flex-direction: column;
   }
 }

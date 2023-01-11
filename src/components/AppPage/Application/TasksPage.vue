@@ -16,5 +16,6 @@ export default {
 <style lang="scss" scoped>
 .tasks {
   margin-left: 130px;
+  height: 100vh;
 }
 </style>

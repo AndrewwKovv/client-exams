@@ -145,8 +145,6 @@ export default {
   &__corrector {
     margin-top: 0;
   }
-  &__correctors {
-  }
   &__form_input {
     color: white;
     margin: 5px auto 20px;

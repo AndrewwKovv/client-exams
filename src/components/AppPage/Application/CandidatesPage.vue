@@ -19,6 +19,7 @@ export default {
 <style lang="scss" scoped>
 .candidates {
   margin-left: 130px;
+  height: 100vh;
   &__wrapper {
     padding: 25px;
   }
