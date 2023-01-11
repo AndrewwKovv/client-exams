@@ -20,7 +20,7 @@
         {{ vacancies.title }}
       </main-text>
       <main-text
-        class="vacanci__title"
+        class="vacanci__title vacanci__title_link"
         :fontFamily="'montSer'"
         :fontSize="16"
         :fontWeight="500"
@@ -76,6 +76,9 @@ export default {
     word-break: break-word;
     &_time {
       max-width: 208px;
+    }
+    &_link {
+      max-width: 248px;
     }
   }
 }

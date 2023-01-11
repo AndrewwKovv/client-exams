@@ -20,7 +20,7 @@
         >
           {{ title }}
         </main-text>
-        <my-button class="vacancy__btn" @click="showDialog">
+        <!-- <my-button class="vacancy__btn" @click="showDialog">
           <main-text
             class="vacancy__subtitle"
             :fontFamily="'montSer'"
@@ -29,7 +29,7 @@
           >
             редактировать
           </main-text>
-        </my-button>
+        </my-button> -->
         <change-modal
           v-model:show="dialogVisible"
           :nameVacy="title"
