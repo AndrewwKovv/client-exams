@@ -18,8 +18,7 @@
               :fontFamily="'montSer'"
               :fontSize="16"
               :fontWeight="500"
-            >
-              + Добавить вакансию
+              >+ добавить вакансию
             </main-text></my-button
           >
           <vacancy-modal v-model:show="dialogVisible" />

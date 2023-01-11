@@ -10,6 +10,9 @@
 
     <div class="app-header__profile">
       <button type="button" class="btn btn-dark">
+        <a class="app-header__text_link" href="/appPage.json">JSON</a>
+      </button>
+      <button type="button" class="btn btn-dark">
         <main-text
           class="app-header__text"
           :fontFamily="'montSer'"
