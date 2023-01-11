@@ -12,7 +12,7 @@
           alt="Logo"
           class="modal__logo__img"
         />
-        ItvHunt
+        {{ myPadeDate.intro.desc.title }}
       </main-text>
       <form @submit.prevent class="modal__form">
         <input
@@ -35,7 +35,7 @@
             :fontFamily="'montSer'"
             :fontSize="16"
             :fontWeight="500"
-            >Не верный Логин или Пароль
+            >{{ myPadeDate.auth.error }}
           </main-text>
         </div>
       </form>
@@ -65,6 +65,7 @@ export default {
     };
   },
   props: {
+    myPadeDate: Object,
     show: {
       type: Boolean,
       default: false,

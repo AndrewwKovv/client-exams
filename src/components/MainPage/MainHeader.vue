@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" v-if="myPadeDate.header">
     <main-text
       class="header__logo-wrapper"
       :fontFamily="'montSer'"
@@ -11,7 +11,7 @@
         alt="Logo"
         class="header__logo__img"
       />
-      {{ myPadeDate.header.logo }}
+      {{ myPadeDate.header.title }}
     </main-text>
     <nav class="header__nav">
       <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18">{{
@@ -28,7 +28,10 @@
           >{{ myPadeDate.header.login }}</main-text
         >
       </my-button>
-      <auth-modal v-model:show="dialogVisible"></auth-modal>
+      <auth-modal
+        :myPadeDate="myPadeDate"
+        v-model:show="dialogVisible"
+      ></auth-modal>
     </nav>
   </header>
 </template>

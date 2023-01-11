@@ -2,8 +2,8 @@
   <div class="modal" v-if="show" @click="hideDialog">
     <div class="modal__content" @click.stop>
       <main-text :fontFamily="'montSer'" :fontSize="26" :fontWeight="500"
-        >Быстрая регистрация</main-text
-      >
+        >{{ myPadeDate.regis.title }}
+      </main-text>
       <form @submit.prevent class="modal__form" method="post">
         <select class="content__form">
           <option selected disabled>Выберите деятельность</option>
@@ -32,15 +32,12 @@
       <div class="modal__content-accept">
         <div for="btn-acceptt" class="modal__content-p">
           <main-text :fontFamily="'montSer'" :fontSize="14"
-            >При регистрации соглашаюсь с
-            <a href="#" class="modal__link"
-              >Пользовательским<br />
-              соглашением</a
-            >
-            и
-            <a href="#" class="modal__link"
-              >Политика конфиденциальности</a
-            ></main-text
+            >{{ myPadeDate.regis.text.start }}
+            <a href="#" class="modal__link">{{ myPadeDate.regis.text.pols }}</a>
+            {{ myPadeDate.regis.text.and }}
+            <a href="#" class="modal__link">{{
+              myPadeDate.regis.text.policy
+            }}</a></main-text
           >
         </div>
       </div>
@@ -67,6 +64,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    myPadeDate: Object,
   },
   methods: {
     hideDialog() {
@@ -100,6 +98,9 @@ export default {
     min-height: 170px;
     min-width: 270px;
     padding: 35px;
+    &-p {
+      max-width: 400px;
+    }
   }
   &__form {
     display: flex;

@@ -2,14 +2,15 @@
   <div>
     <section class="contact">
       <div class="contact__wrapper">
-        <div class="contact__info">
+        <div class="contact__info" v-if="myPadeDate.footer">
           <main-text
             class="contact__title"
             :fontFamily="'montSer'"
             :fontSize="28"
             :fontWeight="600"
           >
-            Подпишитесь на рассылку
+            {{ myPadeDate.footer.msg.title }}
+
             <main-text
               class="contact__subtitle"
               :fontFamily="'montSer'"
@@ -17,11 +18,11 @@
               :fontWeight="500"
               :color="'#BCBCBC'"
             >
-              Наши письма читают уже более 10000 HR-специалистов
+              {{ myPadeDate.footer.msg.subtitle }}
             </main-text>
           </main-text>
         </div>
-        <div class="contact__form">
+        <div class="contact__form" v-if="myPadeDate.footer">
           <form class="contact-form">
             <fieldset class="contact-form__info">
               <input
@@ -41,8 +42,9 @@
                   class="contact__btn_text"
                   :fontFamily="'montSer'"
                   :fontSize="16"
-                  >Подписаться</main-text
                 >
+                  {{ myPadeDate.footer.msg.btn }}
+                </main-text>
               </my-button>
             </fieldset>
           </form>
@@ -50,14 +52,14 @@
       </div>
     </section>
     <section class="footer">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper" v-if="myPadeDate.footer">
         <a href=""
           ><main-text
             class="footer__link"
             :fontFamily="'montSer'"
             :fontSize="18"
             :color="'#BCBCBC'"
-            >Политика конфиденциальности</main-text
+            >{{ myPadeDate.footer.list.policy }}</main-text
           ></a
         >
         <a href=""
@@ -66,12 +68,12 @@
             :fontFamily="'montSer'"
             :fontSize="18"
             :color="'#BCBCBC'"
-            >Пользовательское соглашение</main-text
+            >{{ myPadeDate.footer.list.pols }}</main-text
           ></a
         >
-        <main-text :fontFamily="'montSer'" :fontSize="18" :color="'#BCBCBC'"
-          >kovshov.K@yandex.ru</main-text
-        >
+        <main-text :fontFamily="'montSer'" :fontSize="18" :color="'#BCBCBC'">{{
+          myPadeDate.footer.list.email
+        }}</main-text>
         <a href="#"
           ><img
             src="@/assets/telegram-icn.svg"
@@ -89,6 +91,9 @@
 <script>
 export default {
   name: 'MyFooter',
+  props: {
+    myPadeDate: Object,
+  },
 };
 </script>
 
