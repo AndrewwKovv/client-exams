@@ -18,6 +18,6 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background-color: #343434;
+  background-color: #1e1e1e;
 }
 </style>

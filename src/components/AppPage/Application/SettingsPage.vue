@@ -32,48 +32,67 @@
           >
           <main-form class="settings__form_input" v-model="link" type="text" />
         </div>
-        <div class="settings__corrector">
-          <main-text
-            class="settings__titles"
-            :fontFamily="'montSer'"
-            :fontSize="18"
-            :fontWeight="500"
-          >
-            Изменить пароль
-          </main-text>
-          <label class="settings__label" for="login"
-            ><main-text
-              class="settings__title"
-              :fontFamily="'montSer'"
-              :fontSize="14"
-              :fontWeight="400"
+        <main-text
+          class="settings__titles"
+          :fontFamily="'montSer'"
+          :fontSize="18"
+          :fontWeight="500"
+        >
+          Изменить пароль
+        </main-text>
+        <div class="settings__correctors">
+          <div class="settings__correctors_item">
+            <label class="settings__label" for="login"
+              ><main-text
+                class="settings__title"
+                :fontFamily="'montSer'"
+                :fontSize="14"
+                :fontWeight="400"
+              >
+                Тукущий пароль
+              </main-text></label
             >
-              Тукущий пароль
-            </main-text></label
-          >
-          <main-form class="settings__form_input" v-model="link" type="text" />
-          <label class="settings__label" for="login"
-            ><main-text
-              class="settings__title"
-              :fontFamily="'montSer'"
-              :fontSize="14"
-              :fontWeight="400"
+            <main-form
+              class="settings__form_input"
+              v-model="link"
+              type="text"
+            />
+          </div>
+          <div class="settings__correctors_item">
+            <label class="settings__label" for="login"
+              ><main-text
+                class="settings__title"
+                :fontFamily="'montSer'"
+                :fontSize="14"
+                :fontWeight="400"
+              >
+                Новый пароль
+              </main-text></label
             >
-              Новый пароль
-            </main-text></label
-          >
-          <main-form class="settings__form_input" v-model="link" type="text" />
-          <label class="settings__label" for="login"
-            ><main-text
-              class="settings__title"
-              :fontFamily="'montSer'"
-              :fontSize="14"
-              :fontWeight="400"
+            <main-form
+              class="settings__form_input"
+              v-model="link"
+              type="text"
+            />
+          </div>
+
+          <div class="settings__correctors_item">
+            <label class="settings__label" for="login"
+              ><main-text
+                class="settings__title"
+                :fontFamily="'montSer'"
+                :fontSize="14"
+                :fontWeight="400"
+              >
+                Повторите пароль
+              </main-text></label
             >
-              Повторите пароль
-            </main-text></label
-          >
-          <main-form class="settings__form_input" v-model="link" type="text" />
+            <main-form
+              class="settings__form_input"
+              v-model="link"
+              type="text"
+            />
+          </div>
         </div>
         <div class="settings__exit">
           <main-text
@@ -126,6 +145,8 @@ export default {
   &__corrector {
     margin-top: 0;
   }
+  &__correctors {
+  }
   &__form_input {
     color: white;
     margin: 5px auto 20px;
@@ -138,6 +159,9 @@ export default {
   }
   &__titles {
     margin-bottom: 20px;
+  }
+  &__title {
+    margin-right: 15px;
   }
 }
 </style>

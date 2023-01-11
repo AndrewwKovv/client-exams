@@ -13,12 +13,12 @@
             class="material-icons__size"
           />
         </span>
-        <span class="text"
+        <span class="text" v-if="appPageDate.sidebar"
           ><main-text
             class="sidebar__text"
             :fontFamily="'montSer'"
             :fontSize="16"
-            >Кандидаты</main-text
+            >{{ appPageDate.sidebar.candidates }}</main-text
           ></span
         >
       </router-link>
@@ -30,12 +30,12 @@
             class="material-icons__size"
           />
         </span>
-        <span class="text"
+        <span class="text" v-if="appPageDate.sidebar"
           ><main-text
             class="sidebar__text"
             :fontFamily="'montSer'"
             :fontSize="16"
-            >Задачи</main-text
+            >{{ appPageDate.sidebar.task }}</main-text
           ></span
         >
       </router-link>
@@ -47,12 +47,12 @@
             class="material-icons__size"
           />
         </span>
-        <span class="text"
+        <span class="text" v-if="appPageDate.sidebar"
           ><main-text
             class="sidebar__text"
             :fontFamily="'montSer'"
             :fontSize="16"
-            >Шаблоны</main-text
+            >{{ appPageDate.sidebar.templates }}</main-text
           ></span
         >
       </router-link>
@@ -64,12 +64,12 @@
             class="material-icons__size"
           />
         </span>
-        <span class="text"
+        <span class="text" v-if="appPageDate.sidebar"
           ><main-text
             class="sidebar__text"
             :fontFamily="'montSer'"
             :fontSize="16"
-            >Вакансии</main-text
+            >{{ appPageDate.sidebar.vacancy }}</main-text
           ></span
         >
       </router-link>
@@ -94,6 +94,9 @@
 <script>
 export default {
   name: 'my-sidebar',
+  props: {
+    appPageDate: Object,
+  },
 };
 </script>
 
@@ -147,7 +150,7 @@ aside {
     }
   }
   .sidebar__settigns {
-    padding: 12px 7px 1px 7px;
+    padding: 10px 10px 10px 10px;
     border: 2px solid;
     border-radius: 10px;
     border-color: #4dd362;

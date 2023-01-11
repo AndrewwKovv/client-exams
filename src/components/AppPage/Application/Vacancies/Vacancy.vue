@@ -2,15 +2,18 @@
   <div class="vacancy">
     <AppHeader appTitle="Вакансия"></AppHeader>
     <div class="vacancy__wrapper">
-      <main-text
-        class="vacancy__back"
-        :fontFamily="'montSer'"
-        :fontSize="16"
-        :fontWeight="500"
-        @click="this.$router.push('/vacanci')"
-      >
-        Назад
-      </main-text>
+      <button type="button" class="btn btn-secondary">
+        <main-text
+          class="vacancy__back"
+          :fontFamily="'montSer'"
+          :fontSize="16"
+          :fontWeight="500"
+          @click="this.$router.push('/vacanci')"
+        >
+          Назад
+        </main-text>
+      </button>
+
       <div class="vacancy__container">
         <main-text
           class="vacancy__title"
@@ -20,7 +23,7 @@
         >
           {{ title }}
         </main-text>
-        <!-- <my-button class="vacancy__btn" @click="showDialog">
+        <my-button class="vacancy__btn" @click="showDialog">
           <main-text
             class="vacancy__subtitle"
             :fontFamily="'montSer'"
@@ -29,7 +32,7 @@
           >
             редактировать
           </main-text>
-        </my-button> -->
+        </my-button>
         <change-modal
           v-model:show="dialogVisible"
           :nameVacy="title"
@@ -75,6 +78,7 @@ export default {
     padding: 25px;
   }
   &__container {
+    margin-top: 5px;
     border-radius: 24px;
     background-color: #505050;
     width: 100%;
@@ -82,7 +86,6 @@ export default {
     display: flex;
   }
   &__back {
-    margin-bottom: 15px;
     cursor: pointer;
     &:hover {
       opacity: 0.8;

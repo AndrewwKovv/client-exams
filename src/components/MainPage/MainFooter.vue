@@ -133,7 +133,6 @@ export default {
     min-width: 240px;
     height: 40px;
     &_text {
-      margin-top: 10px;
       text-align: center;
     }
   }

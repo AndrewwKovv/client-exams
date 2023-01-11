@@ -56,6 +56,11 @@ const routes = [
       },
     ],
   },
+  // {
+  //   path: '/printJson',
+  //   name: 'enterJson',
+  //   component: () => import('@/views/printJson.vue'),
+  // },
   {
     path: '/404',
     name: '404',

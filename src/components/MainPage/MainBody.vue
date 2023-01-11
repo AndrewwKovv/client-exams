@@ -221,20 +221,22 @@
             </main-text>
           </div>
         </div>
-        <my-button
-          class="feedback__btn"
-          @click="showFeed"
-          v-if="myPadeDate.feedback"
-        >
-          <main-text
-            class="feedback__btn-text"
-            :fontFamily="'montSer'"
-            :fontSize="16"
-            :fontWeight="500"
-            :color="'#1E1E1E'"
-            >{{ myPadeDate.feedback.btn }}</main-text
+        <div class="feedback__button">
+          <my-button
+            class="feedback__btn"
+            @click="showFeed"
+            v-if="myPadeDate.feedback"
           >
-        </my-button>
+            <main-text
+              class="feedback__btn-text"
+              :fontFamily="'montSer'"
+              :fontSize="16"
+              :fontWeight="500"
+              :color="'#1E1E1E'"
+              >{{ myPadeDate.feedback.btn }}</main-text
+            >
+          </my-button>
+        </div>
         <FeedbackModal
           :myPadeDate="myPadeDate"
           v-model:show="modalVisible"
@@ -301,7 +303,7 @@ export default {
     border-radius: 10px;
     margin: 40px 0;
     &_text {
-      margin: 12px 45px;
+      margin: 0 20px;
     }
   }
 }
@@ -332,9 +334,6 @@ export default {
     background-color: #4dd362;
     border-radius: 10px;
     margin: 60px auto;
-    &-text {
-      margin: 6px 21px;
-    }
   }
   &__activeTabFocusLine {
     margin-top: 20px;
@@ -372,6 +371,9 @@ export default {
     &_img {
       border-radius: 10px;
     }
+  }
+  &__button {
+    text-align: center;
   }
 }
 .items-title {
@@ -422,9 +424,12 @@ export default {
     border-radius: 10px;
     margin: 60px auto;
     &-text {
-      margin: 5px 0;
+      margin: 0 5px;
       text-align: center;
     }
+  }
+  &__button {
+    text-align: center;
   }
 }
 @media screen and (max-width: 1025px) {

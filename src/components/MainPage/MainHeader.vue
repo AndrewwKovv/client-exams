@@ -14,27 +14,46 @@
       {{ myPadeDate.header.title }}
     </main-text>
     <nav class="header__nav">
-      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18">{{
-        myPadeDate.header.abs
-      }}</main-text>
-      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18"
-        ><a
-          class="header__text_link"
-          href="https://github.com/AndrewwKovv/client-exams"
-          >{{ myPadeDate.header.git }}</a
-        ></main-text
-      >
-      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18">{{
-        myPadeDate.header.contact
-      }}</main-text>
-      <my-button class="header__btn" @click="showDialog">
+      <button type="button" class="btn btn-dark">
+        <main-text
+          class="header__text"
+          :fontFamily="'montSer'"
+          :fontSize="18"
+          >{{ myPadeDate.header.abs }}</main-text
+        >
+      </button>
+      <button type="button" class="btn btn-dark">
+        <a class="header__text_link" href="/mainPage.json">{{
+          myPadeDate.header.jjs
+        }}</a>
+      </button>
+
+      <button type="button" class="btn btn-dark">
+        <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18"
+          ><a
+            class="header__text_link"
+            href="https://github.com/AndrewwKovv/client-exams"
+            >{{ myPadeDate.header.git }}</a
+          ></main-text
+        >
+      </button>
+      <button type="button" class="btn btn-dark">
+        <main-text
+          class="header__text"
+          :fontFamily="'montSer'"
+          :fontSize="18"
+          >{{ myPadeDate.header.contact }}</main-text
+        >
+      </button>
+      <button type="button" @click="showDialog" class="btn btn-dark">
         <main-text
           class="header__text"
           :fontFamily="'montSer'"
           :fontSize="18"
           >{{ myPadeDate.header.login }}</main-text
         >
-      </my-button>
+      </button>
+
       <auth-modal
         :myPadeDate="myPadeDate"
         v-model:show="dialogVisible"
@@ -93,11 +112,13 @@ export default {
 @media screen and (max-width: 830px) {
   .header {
     flex-wrap: wrap;
+    height: 110px;
   }
 }
 @media screen and (max-width: 649px) {
   .header {
-    height: 170px;
+    height: 270px;
+    padding: 0 60px;
   }
   .header__nav {
     gap: 10px;

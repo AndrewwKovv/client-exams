@@ -9,19 +9,26 @@
     >
 
     <div class="app-header__profile">
-      <main-text class="app-header__text" :fontFamily="'montSer'" :fontSize="18"
-        ><a
-          class="app-header__text_link"
-          href="https://github.com/AndrewwKovv/client-exams"
-          >GIT</a
-        ></main-text
-      >
-      <main-text
-        :fontFamily="'montSer'"
-        :fontSize="20"
-        class="app-header__name-person"
-        >{{ avatar.name }}</main-text
-      >
+      <button type="button" class="btn btn-dark">
+        <main-text
+          class="app-header__text"
+          :fontFamily="'montSer'"
+          :fontSize="18"
+          ><a
+            class="app-header__text_link"
+            href="https://github.com/AndrewwKovv/client-exams"
+            >GIT</a
+          ></main-text
+        >
+      </button>
+      <button type="button" class="btn btn-dark">
+        <main-text
+          :fontFamily="'montSer'"
+          :fontSize="20"
+          class="app-header__name-person"
+          >{{ avatar.name }}</main-text
+        >
+      </button>
       <div class="app-header__photo" @click="this.$router.push('/settings')">
         <img src="@/assets/avatar-photo.svg" />
       </div>

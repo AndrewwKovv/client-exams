@@ -1,6 +1,6 @@
 <template>
   <div class="modal" v-if="show" @click="hideDialog">
-    <div class="modal__content" @click.stop>
+    <div class="modal__content" @click.stop v-if="myPadeDate.feedback">
       <main-text
         class="modal__logo-wrapper"
         :fontFamily="'montSer'"
@@ -12,7 +12,7 @@
           alt="Logo"
           class="modal__logo__img"
         />
-        ItvHunt
+        {{ myPadeDate.feedback.modalka.title }}
       </main-text>
       <form @submit.prevent class="modal__form">
         <input
@@ -47,12 +47,15 @@
             :fontSize="18"
             :fontWeight="500"
             :color="'#1E1E1E'"
-            >Оставить отзыв</main-text
+            >{{ myPadeDate.feedback.modalka.btn }}</main-text
           ></my-button
         >
       </div>
-      <main-text class="btn__save-text" :fontFamily="'montSer'" :fontSize="14"
-        >Ваш отзыв после отправки будет проверен модератором</main-text
+      <main-text
+        class="btn__save-text"
+        :fontFamily="'montSer'"
+        :fontSize="14"
+        >{{ myPadeDate.feedback.modalka.disc }}</main-text
       >
     </div>
   </div>
@@ -66,6 +69,7 @@ export default {
       type: Boolean,
       default: false,
     },
+    myPadeDate: Object,
   },
   methods: {
     hideDialog() {
@@ -117,6 +121,9 @@ export default {
       }
     }
   }
+  &__btn {
+    text-align: center;
+  }
 }
 .btn__save {
   margin: 15px 0;
@@ -124,7 +131,6 @@ export default {
   text-align: center;
   height: 35px;
   &-text {
-    margin-top: 5px;
     text-align: center;
   }
 }

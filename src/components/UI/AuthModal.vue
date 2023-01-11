@@ -40,15 +40,15 @@
         </div>
       </form>
       <div class="modal__btn">
-        <my-button class="btn__save" @click="isValidAuth"
-          ><main-text
+        <button type="button" @click="isValidAuth" class="btn btn-dark">
+          <main-text
+            class="btn__save"
             :fontFamily="'montSer'"
             :fontSize="22"
             :fontWeight="500"
-            :color="'#1E1E1E'"
             >Войти</main-text
-          ></my-button
-        >
+          >
+        </button>
       </div>
     </div>
   </div>
@@ -128,11 +128,8 @@ export default {
       margin: 5px 0;
     }
   }
-}
-.btn__save {
-  margin: 15px 0;
-  background: #4dd362;
-  text-align: center;
-  height: 35px;
+  &__btn {
+    text-align: center;
+  }
 }
 </style>
