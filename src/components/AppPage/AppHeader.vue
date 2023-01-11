@@ -7,14 +7,22 @@
       :fontWeight="500"
       >{{ appTitle }}</main-text
     >
-    <div class="app-header__profile" @click="this.$router.push('/settings')">
+
+    <div class="app-header__profile">
+      <main-text class="app-header__text" :fontFamily="'montSer'" :fontSize="18"
+        ><a
+          class="app-header__text_link"
+          href="https://github.com/AndrewwKovv/client-exams"
+          >GIT</a
+        ></main-text
+      >
       <main-text
         :fontFamily="'montSer'"
         :fontSize="20"
         class="app-header__name-person"
         >{{ avatar.name }}</main-text
       >
-      <div class="app-header__photo">
+      <div class="app-header__photo" @click="this.$router.push('/settings')">
         <img src="@/assets/avatar-photo.svg" />
       </div>
     </div>
@@ -53,6 +61,20 @@ export default {
     gap: 35px;
     flex-wrap: wrap;
     cursor: pointer;
+  }
+  &__text_link {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  &__name-person {
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  &__photo {
     &:hover {
       opacity: 0.75;
     }

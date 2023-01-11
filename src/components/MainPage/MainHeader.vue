@@ -17,6 +17,13 @@
       <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18">{{
         myPadeDate.header.abs
       }}</main-text>
+      <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18"
+        ><a
+          class="header__text_link"
+          href="https://github.com/AndrewwKovv/client-exams"
+          >{{ myPadeDate.header.git }}</a
+        ></main-text
+      >
       <main-text class="header__text" :fontFamily="'montSer'" :fontSize="18">{{
         myPadeDate.header.contact
       }}</main-text>
@@ -77,6 +84,10 @@ export default {
   &__btn {
     padding: 1px 13px;
     border-radius: 5px;
+  }
+  &__text_link {
+    color: white;
+    text-decoration: none;
   }
 }
 @media screen and (max-width: 830px) {
