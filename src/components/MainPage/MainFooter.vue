@@ -51,7 +51,7 @@
         </div>
       </div>
     </section>
-    <section class="footer">
+    <footer class="footer">
       <div class="footer__wrapper" v-if="myPadeDate.footer">
         <a href=""
           ><main-text
@@ -84,7 +84,7 @@
           ><img src="@/assets/vk-icn.svg" alt="vk" class="footer__img"
         /></a>
       </div>
-    </section>
+    </footer>
   </div>
 </template>
 

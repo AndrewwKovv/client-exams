@@ -110,6 +110,9 @@ export default {
   &__link {
     color: #ffffff;
   }
+  &__btn {
+    text-align: center;
+  }
 }
 .content {
   &__form {
@@ -130,6 +133,5 @@ export default {
   margin: 15px 0;
   background: #4dd362;
   text-align: center;
-  height: 35px;
 }
 </style>

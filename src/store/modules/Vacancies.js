@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export default {
   state: {
     vacancies: [],
@@ -22,10 +24,11 @@ export default {
   },
   actions: {
     async fetchVacancies(ctx) {
-      const main = await fetch('http://localhost:3000/vacancies');
-      const vacancies = await main.json();
-
-      ctx.commit('updateVacancies', vacancies);
+      axios
+      .get('/main.json')
+      .then((response) => {
+        ctx.commit('updateVacancies', response.data.vacancies);
+      });
     },
   },
 };

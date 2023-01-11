@@ -41,7 +41,7 @@ const routes = [
           import('@/components/AppPage/Application/VacanciPage.vue'),
       },
       {
-        path: '/vacanci/:id:vacName',
+        path: '/vacanci/:id:vacName:vacLink',
         name: 'vacancyPage',
         props: true,
         component: () =>

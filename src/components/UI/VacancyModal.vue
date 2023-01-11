@@ -34,7 +34,7 @@
         <main-form class="vacancy__form_input" v-model="link" type="text" />
       </form>
       <div class="vacancy-modal__btn">
-        <my-button class="btn__save" @click="onClick"
+        <my-button class="vacancy-modal__btns" @click="onClick"
           ><main-text
             class="vacancy-modal__title"
             :fontFamily="'montSer'"
@@ -109,15 +109,14 @@ export default {
     flex-direction: column;
     margin: 20px auto;
   }
-  &__title {
-    margin: 2px auto;
+  &__btn {
+    text-align: center;
   }
 }
-.btn__save {
+.vacancy-modal__btns {
   margin: 15px 0;
   background: #4dd362;
   text-align: center;
-  height: 35px;
 }
 .vacancy__form {
   &_input {

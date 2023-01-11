@@ -117,7 +117,7 @@ export default {
 }
 @media screen and (max-width: 649px) {
   .header {
-    height: 270px;
+    height: 324px;
     padding: 0 60px;
   }
   .header__nav {

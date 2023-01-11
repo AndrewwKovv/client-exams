@@ -8,7 +8,11 @@
       class="vacancy__link"
       :to="{
         name: 'vacancyPage',
-        params: { id: vacancies.id, vacName: vacancies.title },
+        params: {
+          id: vacancies.id,
+          vacName: vacancies.title,
+          vacLink: vacancies.link,
+        },
       }"
     >
       <main-text

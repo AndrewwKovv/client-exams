@@ -23,6 +23,14 @@
         >
           {{ title }}
         </main-text>
+        <main-text
+          class="vacancy__title"
+          :fontFamily="'montSer'"
+          :fontSize="18"
+          :fontWeight="500"
+        >
+          <a href="/${link}">{{ link }}</a>
+        </main-text>
         <my-button class="vacancy__btn" @click="showDialog">
           <main-text
             class="vacancy__subtitle"
@@ -51,15 +59,20 @@ export default {
   data() {
     return {
       title: '',
+      link: '',
       dialogVisible: false,
     };
   },
   props: {
     vacName: String,
+    vacLink: String,
   },
   methods: {
     getTitleName() {
       this.title = this.$route.params.vacName;
+    },
+    getLinkAdress() {
+      this.link = this.$route.params.vacLink;
     },
     showDialog() {
       this.dialogVisible = true;
@@ -67,6 +80,7 @@ export default {
   },
   beforeMount() {
     this.getTitleName();
+    this.getLinkAdress();
   },
 };
 </script>
@@ -74,6 +88,7 @@ export default {
 <style lang="scss" scoped>
 .vacancy {
   margin-left: 130px;
+  height: 100vh;
   &__wrapper {
     padding: 25px;
   }
